@@ -1,9 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import AnimatedText from "./AnimatedText";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
@@ -19,80 +17,55 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient mb-4"
+        >
+          KARAN DUBEY
+        </motion.h1>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4"
+          transition={{ delay: 0.5, duration: 0.7 }}
         >
-          <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-accent/10 text-accent mb-5">
-            Full Stack Developer • UI/UX Designer • Creative Technologist
+          <span className="text-xl md:text-2xl font-medium text-[#22d867] mb-8 inline-block">
+            Computer Science Student & Web Developer
           </span>
         </motion.div>
         
-        <div className="space-y-4 mb-8">
-          <AnimatedText
-            text="Creating digital experiences"
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient"
-            delay={200}
-          />
-          <AnimatedText
-            text="that stand out."
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient-blue"
-            delay={1000}
-          />
-        </div>
-        
         <motion.p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto my-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.8 }}
+          transition={{ delay: 1, duration: 0.7 }}
         >
-          Specialized in crafting beautiful, interactive web applications with smooth
-          animations, responsive designs, and cutting-edge technologies.
+          A passionate developer focused on creating modern, responsive web applications with a strong foundation in computer science and algorithms.
         </motion.p>
         
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.2, duration: 0.8 }}
-        >
-          <Button size="lg" className="px-8 hover-lift">
-            View Projects
-          </Button>
-          <Button size="lg" variant="outline" className="hover-lift">
-            Download Resume
-          </Button>
-        </motion.div>
-        
-        <motion.div
-          className="flex gap-6 mb-16"
+          className="flex flex-wrap justify-center gap-6 mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.6, duration: 0.8 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
         >
-          <a href="#" className="hover:text-accent transition-colors">
-            <Github className="w-6 h-6" />
+          <a href="https://github.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Github className="w-5 h-5" />
+            <span>GitHub</span>
           </a>
-          <a href="#" className="hover:text-accent transition-colors">
-            <Linkedin className="w-6 h-6" />
+          <a href="https://linkedin.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Linkedin className="w-5 h-5" />
+            <span>LinkedIn</span>
           </a>
-          <a href="#" className="hover:text-accent transition-colors">
-            <Twitter className="w-6 h-6" />
+          <a href="mailto:karandubey2122@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Mail className="w-5 h-5" />
+            <span>karandubey2122@gmail.com</span>
           </a>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        >
-          <a href="#projects" className="flex flex-col items-center text-sm text-muted-foreground">
-            <span className="mb-2">Scroll Down</span>
-            <ArrowDown className="w-5 h-5 animate-bounce" />
+          <a href="tel:+917067299313" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Phone className="w-5 h-5" />
+            <span>+91 7067299313</span>
           </a>
         </motion.div>
       </div>
