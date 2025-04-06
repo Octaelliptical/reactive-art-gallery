@@ -67,7 +67,7 @@ const About: React.FC = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gradient-blue">My Story</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gradient-green">My Story</h3>
             <div className="prose prose-invert max-w-none">
               <p className="mb-4">
                 I'm a creative developer who loves building exceptional digital experiences. With a background in both design and development, I bring a unique perspective to every project.
@@ -101,7 +101,7 @@ const About: React.FC = () => {
         <div ref={timelineRef} className="grid grid-cols-1 gap-8 md:gap-12">
           <div>
             <motion.h3
-              className="text-2xl font-bold mb-6 text-gradient-blue"
+              className="text-2xl font-bold mb-6 text-gradient-green"
               initial={{ opacity: 0, y: 20 }}
               animate={timelineInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
@@ -113,7 +113,7 @@ const About: React.FC = () => {
 
           <div>
             <motion.h3
-              className="text-2xl font-bold mb-6 text-gradient-blue"
+              className="text-2xl font-bold mb-6 text-gradient-green"
               initial={{ opacity: 0, y: 20 }}
               animate={timelineInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -127,7 +127,7 @@ const About: React.FC = () => {
 
       {/* Background Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl opacity-20 -z-10" />
-      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl opacity-20 -z-10" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-green-500/10 rounded-full filter blur-3xl opacity-20 -z-10" />
     </section>
   );
 };

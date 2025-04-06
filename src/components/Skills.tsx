@@ -126,7 +126,7 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <motion.h3
-              className="text-2xl font-bold mb-6 text-gradient-blue"
+              className="text-2xl font-bold mb-6 text-gradient-green"
               initial={{ opacity: 0, x: -20 }}
               animate={skillsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -148,7 +148,7 @@ const Skills: React.FC = () => {
           
           <div>
             <motion.h3
-              className="text-2xl font-bold mb-6 text-gradient-blue"
+              className="text-2xl font-bold mb-6 text-gradient-green"
               initial={{ opacity: 0, x: -20 }}
               animate={skillsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -161,7 +161,7 @@ const Skills: React.FC = () => {
                 key={index}
                 name={skill.name}
                 level={skill.level}
-                color="bg-purple-500"
+                color="bg-green-500"
                 delay={index + 5}
                 isInView={skillsInView}
               />
@@ -172,7 +172,7 @@ const Skills: React.FC = () => {
 
       {/* Background Elements */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl opacity-30 -z-10" />
-      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl opacity-20 -z-10" />
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-green-500/10 rounded-full filter blur-3xl opacity-20 -z-10" />
     </section>
   );
 };
